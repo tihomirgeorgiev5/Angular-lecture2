@@ -11,18 +11,26 @@ import { CommonModule } from '@angular/common';
   
 })
 export class AppComponent {
+  classes = ['test1', 'test-1'];
 
   showText = true;
 
-  toggleText(event: MouseEvent, ...args: number[]): void {
+  changeTitleHandler(newTitle: string): void {
+    this.title = newTitle;
+  }
+
+  title = '3';
+
+/*   toggleText(event: MouseEvent, ...args: number[]): void {
+    this.classes.push('test-');
     event.preventDefault();
     this.showText = !this.showText;
     console.log(args);
     
-  }
-  /* title = 3;
+  } */
+ 
 
-  users = [
+ /*  users = [
     {
       name: 'John',
        age: 21
@@ -36,10 +44,10 @@ export class AppComponent {
        age: 23
       },
    
-  ]
+  ] */
 
 
-  buttonClickHandler() { 
+/*   buttonClickHandler() { 
     //this.title++;
     const current = this.title++;
 
@@ -48,4 +56,4 @@ export class AppComponent {
       age: current + 20,
     })
   } */
-}
+} 
