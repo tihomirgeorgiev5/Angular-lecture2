@@ -14,8 +14,11 @@ export class AppComponent {
 
   showText = true;
 
-  toggleText(): void {
+  toggleText(event: MouseEvent, ...args: number[]): void {
+    event.preventDefault();
     this.showText = !this.showText;
+    console.log(args);
+    
   }
   /* title = 3;
 
