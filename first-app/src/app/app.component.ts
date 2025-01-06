@@ -13,6 +13,10 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
 
   showText = true;
+
+  toggleText(): void {
+    this.showText = !this.showText;
+  }
   /* title = 3;
 
   users = [

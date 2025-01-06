@@ -15,7 +15,9 @@
 
 <div *ngIf="showText">Visible</div>
 
-<p>test-component works!</p>
+<button (click)="toggleText()">{{showText ? 'HIDE TEXT' : 'SHOW TEXT'}}</button>
+
+<!-- <p>test-component works!</p> -->
 
 
  
