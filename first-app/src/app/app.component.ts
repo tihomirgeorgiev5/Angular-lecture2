@@ -15,8 +15,9 @@ export class AppComponent {
 
   showText = true;
 
-  changeTitleHandler(newTitle: string): void {
-    this.title = newTitle;
+  changeTitleHandler(inputEl: HTMLInputElement): void {
+    this.title = inputEl.value;
+    inputEl.value = '';
   }
 
   title = '3';
