@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IUser } from '../interfaces/user';
 
 @Component({
   selector: 'app-user-list-item',
-  imports: [],
   templateUrl: './user-list-item.component.html',
   styleUrl: './user-list-item.component.scss'
 })
-export class UserListItemComponent {
+export class UserListItemComponent implements OnInit {
+  @Input() user:IUser | undefined;
 
+  constructor() { } 
+
+  ngOnInit(): void {
+    
+  }
 }

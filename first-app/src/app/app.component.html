@@ -1,23 +1,11 @@
- <div>{{title}}</div>
+<div>
+    HEADER
+</div>
 
-<input #inputElement type="text">
+<div id="content">
+    <app-user-list [userArray]="users"></app-user-list>
+</div>
 
-<button (click)="changeTitleHandler(inputElement)">Click me</button>
-
-<!--<ul>
-    <li *ngFor="let user of users">
-        <span>{{user.name}}</span>
-        <span>{{user.age}}</span>
-        {{title}}
-        
-    </li> 
-</ul> -->
-
-<div *ngIf="showText">Visible</div>
-
-<!-- <button (click)="toggleText($event, 100, 200)">{{showText ? 'HIDE TEXT' : 'SHOW TEXT'}}</button> -->
-
-<!-- <p>test-component works!</p> -->
-
-
- 
+<div>
+    FOOTER
+</div>
