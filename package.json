@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "typescript": "^5.7.2"
+  },
+  "name": "angular-exercises",
+  "version": "1.0.0",
+  "main": "test.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "tsc test.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

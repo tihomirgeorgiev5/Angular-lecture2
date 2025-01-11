@@ -11,50 +11,23 @@ import { CommonModule } from '@angular/common';
   
 })
 export class AppComponent {
-  classes = ['test1', 'test-1'];
+  title = 'first-app';
 
-  showText = true;
-
-  changeTitleHandler(inputEl: HTMLInputElement): void {
-    this.title = inputEl.value;
-    inputEl.value = '';
-  }
-
-  title = '3';
-
-/*   toggleText(event: MouseEvent, ...args: number[]): void {
-    this.classes.push('test-');
-    event.preventDefault();
-    this.showText = !this.showText;
-    console.log(args);
-    
-  } */
- 
-
- /*  users = [
+   users = [
     {
       name: 'John',
-       age: 21
-      },
+      age: 21
+    },
     {
       name: 'Jane',
-       age: 22
-      },
+      age: 22
+      
+    },
     {
       name: 'Jim',
-       age: 23
-      },
-   
-  ] */
+      age: 23
+    }
+    
+  ];
 
-
-/*   buttonClickHandler() { 
-    //this.title++;
-    const current = this.title++;
-
-    this.users.push({
-      name: `User ${current}`,
-      age: current + 20,
-    })
-  } */
-} 
+}
