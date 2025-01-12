@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { UserListItemComponent } from "../user-list-item/user-list-item.component";
 import { IUser } from '../interfaces/user';
 
@@ -13,9 +13,19 @@ export class UserListComponent implements OnInit {
   @Output() addUser = new EventEmitter<IUser>();
 
 
-  constructor() { }
+  constructor() {
+    console.log(this.userArray);
+    debugger
+   }
  
   ngOnInit(): void {
+    console.log(this.userArray);
+    debugger;
+  }
+
+  ngOnChanges(simpleChanges:SimpleChanges): void {
+    console.log(simpleChanges);
+    debugger;
   }
 
   addNewUser(userNameInput: HTMLInputElement, userAgeInput: HTMLInputElement) :void {
