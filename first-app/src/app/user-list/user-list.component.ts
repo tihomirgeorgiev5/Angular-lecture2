@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { UserListItemComponent } from "../user-list-item/user-list-item.component";
 import { IUser } from '../interfaces/user';
 
@@ -6,7 +6,8 @@ import { IUser } from '../interfaces/user';
   selector: 'app-user-list',
   imports: [UserListItemComponent],
   templateUrl: './user-list.component.html',
-  styleUrl: './user-list.component.scss'
+  styleUrl: './user-list.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserListComponent implements OnInit {
   @Input() userArray: IUser[] = [];
@@ -15,17 +16,17 @@ export class UserListComponent implements OnInit {
 
   constructor() {
     console.log(this.userArray);
-    debugger
+    
    }
  
   ngOnInit(): void {
     console.log(this.userArray);
-    debugger;
+   
   }
 
   ngOnChanges(simpleChanges:SimpleChanges): void {
     console.log(simpleChanges);
-    debugger;
+    
   }
 
   addNewUser(userNameInput: HTMLInputElement, userAgeInput: HTMLInputElement) :void {

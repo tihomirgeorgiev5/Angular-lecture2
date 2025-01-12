@@ -33,7 +33,8 @@ export class AppComponent {
   ];
 
   addNewUserHandler(newUser: IUser): void {
-    this.users= this.users.concat(newUser);
+    //this.users= this.users.concat(newUser);
+    this.users.push(newUser);
   }
 
 }
