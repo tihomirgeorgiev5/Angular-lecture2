@@ -34,7 +34,14 @@ export class AppComponent {
 
   addNewUserHandler(newUser: IUser): void {
     //this.users= this.users.concat(newUser);
-    this.users.push(newUser);
+    //this.users.push(newUser);
   }
+
+  constructor() {
+    setInterval(() => this.users.push(
+      { name: 'JimMorrison',
+       age: 23 }
+    ), 5000);
+}
 
 }
