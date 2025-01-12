@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { UserListItemComponent } from "../user-list-item/user-list-item.component";
 import { IUser } from '../interfaces/user';
 
@@ -10,6 +10,7 @@ import { IUser } from '../interfaces/user';
 })
 export class UserListComponent implements OnInit {
   @Input() userArray: IUser[] = [];
+  @Output() addUser = new EventEmitter<IUser>();
 
 
   constructor() { }
@@ -19,10 +20,10 @@ export class UserListComponent implements OnInit {
 
   addNewUser(userNameInput: HTMLInputElement, userAgeInput: HTMLInputElement) :void {
     const { value: name } = userNameInput;
-    const { value: age } = userAgeInput;
+    const { valueAsNumber: age } = userAgeInput;
 
-    console.log(name, age);
 
+    this.addUser.emit({name, age});
     userNameInput.value = '';
     userAgeInput.value = '';
     
