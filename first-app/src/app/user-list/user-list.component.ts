@@ -11,9 +11,21 @@ import { IUser } from '../interfaces/user';
 export class UserListComponent implements OnInit {
   @Input() userArray: IUser[] = [];
 
-  constructor() { }
 
+  constructor() { }
+ 
   ngOnInit(): void {
+  }
+
+  addNewUser(userNameInput: HTMLInputElement, userAgeInput: HTMLInputElement) :void {
+    const { value: name } = userNameInput;
+    const { value: age } = userAgeInput;
+
+    console.log(name, age);
+
+    userNameInput.value = '';
+    userAgeInput.value = '';
+    
   }
 
 }

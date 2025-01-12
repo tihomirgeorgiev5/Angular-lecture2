@@ -5,7 +5,6 @@ import { UserListComponent } from "./user-list/user-list.component";
 import { UserListItemComponent } from './user-list-item/user-list-item.component';
 import { IUser } from './interfaces/user';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
