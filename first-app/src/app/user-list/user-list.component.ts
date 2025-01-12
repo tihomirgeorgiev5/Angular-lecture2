@@ -22,8 +22,12 @@ export class UserListComponent implements OnInit {
     const { value: name } = userNameInput;
     const { valueAsNumber: age } = userAgeInput;
 
+    
 
     this.addUser.emit({name, age});
+
+    console.log(name, age);
+ 
     userNameInput.value = '';
     userAgeInput.value = '';
     
