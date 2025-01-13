@@ -38,10 +38,13 @@ export class AppComponent {
   }
 
   constructor() {
-    setInterval(() => this.users.push(
+    setInterval(() => {this.users.push(
       { name: 'JimMorrison',
-       age: 23 }
-    ), 5000);
+       age: 23
+      })
+      console.log('New user added');
+      
+    }, 5000);
 }
 
 }
