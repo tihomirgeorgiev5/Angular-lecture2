@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserListComponent } from "./user-list/user-list.component";
 import { IUser } from './interfaces/user';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -11,12 +12,7 @@ import { IUser } from './interfaces/user';
   
 })
 export class AppComponent {
-addNewUserHandler($event: IUser) {
-throw new Error('Method not implemented.');
-}
-  title = 'first-app';
-  users!: IUser[];
-
+  constructor(public userService: UserService) { }
 }
 
 
