@@ -14,7 +14,7 @@ export class UserListComponent implements OnInit {
   @Output() addUser = new EventEmitter<IUser>();
 
 
-  constructor() {
+  constructor() { 
     console.log(this.userArray);
     
    }
