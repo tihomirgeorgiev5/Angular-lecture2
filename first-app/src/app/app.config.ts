@@ -10,7 +10,12 @@ export const appConfig: ApplicationConfig = {
     { eventCoalescing: true }),
     {
        provide: UserService,
-      useClass: UserService 
+      //useClass: UserService 
+      useValue: 
+      {
+        users: [{name: 'John', age: 21}],
+        addNewUserHandler: () => {alert('Ne!')}
+      }
     },
      provideRouter(routes)]
 };
