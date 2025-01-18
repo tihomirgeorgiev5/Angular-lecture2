@@ -1,5 +1,8 @@
+import { Inject, Injectable } from "@angular/core";
+import { myStringInjectionToken } from "./app.config";
 import { IUser } from "./interfaces/user";
 
+@Injectable()
 export class UserService {
 
   users = [
@@ -19,7 +22,9 @@ export class UserService {
     
   ];
 
-  constructor() {  }
+  constructor(@Inject(myStringInjectionToken) myString: string ) {
+    console.log(myString);
+    }
    
 
   addNewUserHandler(newUser: IUser): void {
