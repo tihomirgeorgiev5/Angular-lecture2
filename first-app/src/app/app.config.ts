@@ -1,21 +1,21 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, InjectionToken, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { UserService } from './user.service';
 
-
+const myStringInjectionToken = new InjectionToken('myString');
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection(
     { eventCoalescing: true }),
     {
        provide: UserService,
-      //useClass: UserService 
-      useValue: 
-      {
-        users: [{name: 'John', age: 21}],
-        addNewUserHandler: () => {alert('Ne!')}
-      }
+       useClass: UserService 
+      
     },
-     provideRouter(routes)]
+    {
+        provide: myStringInjectionToken,
+        useValue: 'Hello, World!'
+    },
+    provideRouter(routes)]
 };
