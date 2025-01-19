@@ -2,7 +2,9 @@ import { Inject, Injectable } from "@angular/core";
 import { myStringInjectionToken } from "./app.config";
 import { IUser } from "./interfaces/user";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class UserService {
 
   users = [

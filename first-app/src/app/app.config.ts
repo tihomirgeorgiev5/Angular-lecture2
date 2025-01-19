@@ -8,11 +8,11 @@ export const myStringInjectionToken = new InjectionToken('myString');
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection(
     { eventCoalescing: true }),
-    {
+    /* {
        provide: UserService,
        useClass: UserService 
       
-    },
+    }, */
     {
         provide: myStringInjectionToken,
         useValue: 'Hello, World!'
