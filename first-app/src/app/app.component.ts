@@ -4,6 +4,14 @@ import { UserListComponent } from "./user-list/user-list.component";
 import { IUser } from './interfaces/user';
 import { UserService } from './user.service';
 
+const p = new Promise((resolve, reject) => {
+  setTimeout(() => 
+    resolve('Hi, How are you?'), 2000);
+});
+
+p.then((value) => console.log(value));
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
