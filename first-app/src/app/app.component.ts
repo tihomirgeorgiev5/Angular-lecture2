@@ -14,9 +14,10 @@ p.then((value) => console.log(value)); */
 
 Promise.resolve(1000).then(x => x + 1).then(console.log);
 
-of(1000, 200, 300).pipe(
-  map(x => x + 100),
-).subscribe((x) => {console.log(x);
+of(1000, 200, 300).pipe
+(map(x => x + 100)
+,).subscribe((x) => {
+  console.log(x);
 });
 
 
